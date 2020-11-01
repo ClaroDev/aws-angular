@@ -24,6 +24,6 @@ export class CountriesService {
   }
 
   getDetails(countryName: string): Observable<any> {
-    return this.http.get(`http://ec2-54-246-147-1.eu-west-1.compute.amazonaws.com:5000/country/${countryName}`, this.httpOptions);
+    return this.http.get(`http://localhost:5000/country/${countryName}`, this.httpOptions);
   }
 }
