@@ -1,0 +1,11 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search by Name" [(ngModel)]="searchTerm"/>
+  </div>
+<div class="row"> 
+    <div *ngFor = "let d of countries | countryFilter: searchTerm" class="col-6">
+        <a routerLink="/details/{{d.name}}">
+        <img src="{{d.flag}}">
+        </a>
+        <span>{{d.name}}</span>  
+    </div> 
+</div>
